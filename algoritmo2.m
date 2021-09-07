@@ -19,8 +19,15 @@ do
   % matríz X
   E = diag(eigenvalues); % matríz diagonal con eigenvalues
   X = V*E*V'; % paso 4
-  X = 1/2(X + X'); % paso 5, aseguramos que X sea simétrica 
+  X = (1/2)*(X + X'); % paso 5, aseguramos que X sea simétrica 
   Y = max(X,0); % paso 6
 until (norm(X - Y) < eps)
-  
+
+% colocar en test_algoritmo2.m
+% ver como importar script / funcion 
+more off
+disp(Y);
+printf("\n");
+disp(eig(Y));
+
 endfunction
