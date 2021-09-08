@@ -1,5 +1,5 @@
-function a2 = algoritmo2 (eigenvalues)
-
+function a1 = algoritmo1 (eigenvalues)
+% algoritmo 1 -> problema 2
 % eigenvalues es el vector de los valores propios
 
 n = length(eigenvalues); % tamaño del vector eigenvalues
