@@ -11,6 +11,9 @@ Y = diag(d)+t+t.'; % juntarlos en una matriz simetrica
 
 % producto de Hadamard a la matrix Y
 Y = Y.*Y;
+
+% condicion de parada
+count = 0;
 do
   % calcular descomposicion de Y (Metodo de Jacobi o ...)
   vaps_y = eig(Y); % vector columna con vaps de Y
@@ -21,13 +24,9 @@ do
   X = V*E*V'; % paso 4
   X = (1/2)*(X + X'); % paso 5, aseguramos que X sea simétrica 
   Y = max(X,0); % paso 6
-until (norm(X - Y) < eps)
+  count++;
+until ((norm(X - Y) < eps) || count == 1000)
 
-% colocar en test_algoritmo2.m
-% ver como importar script / funcion 
-more off
-disp(Y);
-printf("\n");
-disp(eig(Y));
+a1 = Y;
 
 endfunction
