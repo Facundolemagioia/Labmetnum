@@ -14,10 +14,13 @@ for i = 1:10
   
   
   more off
+  %espectro de entrada
   disp(lambda);
   printf("\n");
+  % matriz buscada
   disp(Y);
   printf("\n");
+  %vaps de matriz buscada
   disp(eig(Y));
   printf("\n");
 endfor
