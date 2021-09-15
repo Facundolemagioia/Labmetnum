@@ -8,7 +8,7 @@ valores_n = [3, 7, 19, 26, 31, 40, 55, 67, 80, 99];
 output_precision(16);
 for j = valores_n
   disp("N = "), disp(j)
-  for i = 1:100
+  for i = 1:10
     lambda = 1*rand(j,1);
     [Y, i, a, t]= algoritmo1_exp(lambda);
     err = norm(lambda - eig(Y), "fro");
@@ -17,19 +17,17 @@ for j = valores_n
     
     %se muestra error
     disp("Error:"), disp(err);
-    printf("\n");
     
     % matriz buscada
     disp("iteraciones:"), disp(i);
-    printf("\n");
+ 
     
     % tasa de convergencia
     disp("tasa de convergencia:"), disp(a);
-    printf("\n");
     
     %tiempo
     disp("tiempo:"), disp(t);
-    print("\n");
+    printf("\n");
   endfor
   disp("======================================");
 endfor
