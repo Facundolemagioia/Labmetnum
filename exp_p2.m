@@ -1,1 +1,0 @@
-% experimentacion problema 2
