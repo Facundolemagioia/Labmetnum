@@ -1,9 +1,10 @@
 % test de algoritmo 1 -> problema 2
+% datos para la parte 4.1 1
 % lambda varia en cada una de las simulaciones 
 
-function test1 = test_algoritmo1()
+function test1 = test_algoritmo1_1()
 
-valores_n = [3, 5, 7, 10, 15, 21, 29, 55, 67, 80];
+valores_n = [2, 3, 5, 7, 10, 15, 21, 29, 55, 67];
 
 
 output_precision(16);
@@ -13,7 +14,9 @@ for j = valores_n
   prom_tiempo = 0;
   tasa_convergencia = 0;
   for i = 1:100
-    lambda = 1*rand(j,1);
+    %vaps en rango de -10 ... 10
+    %-5 + (5-(-5))
+    lambda = -10 + (10-(-10)).*rand(j,1);
     [Y, i, a, t]= algoritmo1_exp(lambda);
     
     %no nos importa por ahora

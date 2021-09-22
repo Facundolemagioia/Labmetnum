@@ -19,9 +19,10 @@ Y = Y.*Y;
 
 eps = 10^(-10);
 count = 0;
+eigenvalues = sort(eigenvalues, 'descend');
 do
-  vaps_y = eig(Y); 
-  [V, D] = eig(Y); 
+  % usa eigd, llamando a funcion de eigd.m
+  [V, D] = eigd(Y); 
 
   E = diag(eigenvalues); 
   X = V*E*V'; 
@@ -43,6 +44,5 @@ if(count == 1000 && (norm(X-Y, "fro") > eps))
 else 
   a = 1;
 endif
-
 
 endfunction
