@@ -33,6 +33,16 @@ until ((norm(X-Y, "fro") < eps) || count == 1000)
 M = X;
 i = count;
 t = etime(clock(), t0); %numero de segundo desde que t0 fue inicializada
-a = (norm(X-Y, "fro") < eps) / eps;
+
+% si converge -> 1 , no converge -> 0
+% va sumando los que converge
+%luego divide por 100 (en test_algoritmo1)
+
+if(count == 1000 && (norm(X-Y, "fro") > eps))
+  a = 0;
+else 
+  a = 1;
+endif
+
 
 endfunction
