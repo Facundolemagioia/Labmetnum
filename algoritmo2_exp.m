@@ -1,5 +1,7 @@
-function a2 = algoritmo2(eigenvalues)
+function [X, i, a, t] = algoritmo2_exp(eigenvalues)
   % algoritmo 2 -> problema 1
+  t0 = clock();
+  
   n = length(eigenvalues);
   
   Y = rand(n); % paso 1, matriz real random
@@ -21,7 +23,6 @@ function a2 = algoritmo2(eigenvalues)
     
     lambda_temp = P(1,:); % segunda fila
     
-    
     while(((norm(lambda_inicial - lambda_temp))^2 >= eps) && (count < N))
       lambda_techo = P(count,:);
       diferencia = (norm(lambda_inicial - lambda_techo))^2;
@@ -29,7 +30,6 @@ function a2 = algoritmo2(eigenvalues)
            lambda_temp = lambda_techo;
       endif
       count++;
-      disp(count);
     endwhile
     
     T = T - diag(diag(T)) + diag(lambda_temp);
@@ -39,7 +39,15 @@ function a2 = algoritmo2(eigenvalues)
    
   until ((norm(X - Y) < eps ) || (count2 == 5000))
  
-  X
-  disp(eig(X));
+  M = X;
+  t = etime(clock(), t0);
+  i = count2;
+  
+  if(count == 5000 && (norm(X-Y, "fro") > eps))
+    a = 0;
+  else 
+    a = 1;
+  endif
+  
 endfunction
 

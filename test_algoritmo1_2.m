@@ -7,11 +7,13 @@ valores_k = [1/10, 1/8, 1/6, 1/5, 1/3, 1/2, 3/4, 4/5, 17/20, 19/20];
 
 
 output_precision(16);
+
 for k = valores_k
   disp("k = "), disp(k)
   prom_iteraciones = 0;
   prom_tiempo = 0;
   tasa_convergencia = 0;
+  
   for i = 1:100
     lambda = 1*rand(j,1);
     [Y, i, a, t]= algoritmo1_exp(lambda);
