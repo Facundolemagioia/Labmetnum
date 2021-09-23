@@ -4,7 +4,7 @@
 
 function test1 = test_algoritmo1_1()
 %36, 55, 80
-valores_n = [2, 3, 5, 7, 10, 15, 21, 55,];
+valores_n = [2, 3, 5, 7, 10, 15, 21, 36, 55, 80];
 
 
 output_precision(16);
@@ -17,7 +17,7 @@ for j = valores_n;
   prom_iteraciones = 0;
   prom_tiempo = 0;
   tasa_convergencia = 0;
-  for i = 1:100
+  for k = 1:100
   
     %vaps en rango de -10 ... 10
     do
