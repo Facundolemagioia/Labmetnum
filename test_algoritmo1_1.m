@@ -3,12 +3,14 @@
 % lambda varia en cada una de las simulaciones 
 
 function test1 = test_algoritmo1_1()
-
-valores_n = [2, 3, 5, 7, 10, 15, 21, 36, 55, 80];
+%36, 55, 80
+valores_n = [2, 3, 5, 7, 10, 15, 21, 55,];
 
 
 output_precision(16);
-errores = [];
+tasa = [];
+itera = [];
+tiempo = [];
 
 for j = valores_n;
   disp("N = "), disp(j);
@@ -19,7 +21,7 @@ for j = valores_n;
   
     %vaps en rango de -10 ... 10
     do
-      lambda = -10 + (10-(-10)).*rand(j,1);
+      lambda = -10 + (20).*rand(j,1);
     until (sum(lambda) >= 0)
         
     [Y, i, a, t]= algoritmo1_exp(lambda);
@@ -33,7 +35,10 @@ for j = valores_n;
     tasa_convergencia = tasa_convergencia + (a/100);
   endfor
   
-  errores = [errores, tasa_convergencia];
+  tasa = [tasa, tasa_convergencia];
+  itera = [itera, prom_iteraciones];
+  tiempo = [tiempo, prom_tiempo];
+  
   more off
   
   disp("promedio-iteraciones:"), disp(prom_iteraciones);
@@ -44,6 +49,18 @@ for j = valores_n;
   
 endfor
 
-plot(errores);
+subplot(1, 3, 1)
+plot(valores_n,tasa);
+xlabel("N");
+ylabel("tasa de exito de convergencia");
+subplot(1,3,2)
+plot(valores_n, itera);
+xlabel("N");
+ylabel("iteraciones");
+subplot(1,3,3)
+plot(valores_n, tiempo);
+xlabel("N");
+ylabel("tiempo");
+ 
 
 endfunction

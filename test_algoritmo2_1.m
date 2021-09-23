@@ -42,6 +42,6 @@ for j = valores_n;
   
 endfor
 t = etime(clock(), t0);
-plot(tasa);
+plot(valores_n, tasa);
 
 endfunction

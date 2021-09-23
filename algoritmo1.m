@@ -16,10 +16,10 @@ Y = Y.*Y;
 eps = 10^(-10);
 % condicion de parada
 count = 0;
+eigenvalues = sort(eigenvalues, 'descend');
 do
   % calcular descomposicion de Y 
-  vaps_y = eig(Y); % vector columna con vaps de Y
-  [V, D] = eig(Y); % relacion: Y = V*D*inv(V) con inv(V) = V'
+  [V, D] = eigd(Y); % relacion: Y = V*D*inv(V) con inv(V) = V'
 
   % matríz X
   E = diag(eigenvalues); % matríz diagonal con eigenvalues
