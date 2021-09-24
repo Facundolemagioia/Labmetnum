@@ -23,7 +23,7 @@ algoritmo1([-1, 2.5, 5, -0.1])
 ```
 Desplegará una solución para el problema 2.
 ### simulaciones
-Para ejecutar las simulaciones de la sección de experimentación para el algorimo 1 se debe llamar a `test_algoritmo1_1()` o `test_algoritmo1_2()` dependiendo de que parte se desea testear. Ejemplo:
+Para ejecutar las simulaciones de la sección de experimentación para el algorimo 1 se debe llamar a `test_algoritmo1_1()` o `test_algoritmo1_2()` dependiendo de que parte se desea testear. Lo mismo si se quiere testear las simulaciones del problema 1 `test_algoritmo2_1()`. Ejemplo:
 ```
 test_algoritmo1_1()
 ```
