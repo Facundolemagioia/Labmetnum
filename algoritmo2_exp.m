@@ -43,7 +43,7 @@ function [X, i, a, t] = algoritmo2_exp(eigenvalues)
   t = etime(clock(), t0);
   i = count2;
   
-  if(count == 5000 && (norm(X-Y, "fro") > eps))
+  if((count == 5000 && (norm(X-Y, "fro") > eps)) || !isreal(M))
     a = 0;
   else 
     a = 1;

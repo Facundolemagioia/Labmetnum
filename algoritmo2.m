@@ -29,7 +29,6 @@ function a2 = algoritmo2(eigenvalues)
            lambda_temp = lambda_techo;
       endif
       count++;
-      disp(count);
     endwhile
     
     T = T - diag(diag(T)) + diag(lambda_temp);
