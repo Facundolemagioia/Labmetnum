@@ -16,9 +16,15 @@ Lo mismo ocurre para algoritmo2.m y algoritmo2_exp.m.
 Se detallará la utilización correcta de los algoritmos y tests de los algoritmos. Se recomienda utilizar Octave (GUI) para realizar las siguientes partes.
 
 ### algoritmos
-Para ejecutar el algorimo 1 se debe llamar a `algoritmo1(lambda)` o `algoritmo1_exp(lambda)`, siendo lambda el espectro de valores propios de tamaño arbitrario.
+Para ejecutar el algorimo 1 se debe llamar a `algoritmo1(lambda)` o `algoritmo1_exp(lambda)`, siendo lambda el espectro de valores propios de tamaño arbitrario. Lo mismo para el algorimo 2.
 Ejemplo:
 ```
 algoritmo1([-1, 2.5, 5, -0.1])
-
 ```
+Desplegará una solución para el problema 2.
+### simulaciones
+Para ejecutar las simulaciones de la sección de experimentación para el algorimo 1 se debe llamar a `test_algoritmo1_1()` o `test_algoritmo1_2()` dependiendo de que parte se desea testear. Ejemplo:
+```
+test_algoritmo1_1()
+```
+Desplegará los promedios de las variables solicitadas en 100 simulaciones para cada valor de n (longitud del espectro de entrada para algoritmo1_exp()).
