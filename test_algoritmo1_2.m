@@ -1,7 +1,7 @@
 %test de algoritmo 1 -> problema 2
 % datos para la parte 4.1 2
 
-function test1 = test_algoritmo1()
+function test1 = test_algoritmo1_2()
 
 valores_k = [1/10, 1/8, 1/6, 1/5, 1/3, 1/2, 3/4, 4/5, 17/20, 19/20];
 
