@@ -7,7 +7,8 @@
 - **algoritmo2_exp.m** : Versión del algoritmo 2 para experimentación de sección 4.2
 - **test_algoritmo1_1.m** : Simulaciones para experimentacion de sección 4.1.1
 - **test_algoritmo1_2.m** : Simulaciones para experimentación en sección 4.1.2
-- **test_algoritmo2_1.m** : Simulaciones para experimentación en sección 4.2.1
+- **test_algoritmo2_1.m** : Simulaciones para experimentación en sección 4.2.1 
+- **eigd.m**: Función para hallar descomposición de autovalores de manera descendiente
 
 La diferencia entre algoritmo1.m y algoritmo1_exp.m radica en que el segundo utiliza variables y/o funciones las cuales no son necesarias para la ejecución del algoritmo 1 de forma nativa.
 Lo mismo ocurre para algoritmo2.m y algoritmo2_exp.m.
