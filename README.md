@@ -14,7 +14,7 @@ Lo mismo ocurre para algoritmo2.m y algoritmo2_exp.m.
 
 ## Usage
 Se detallará la utilización correcta de los algoritmos y tests de los algoritmos. Se recomienda utilizar Octave (GUI) para realizar las siguientes partes.
--
+
 ### algoritmos
 Para ejecutar el algorimo 1 se debe llamar a `algoritmo1(lambda)` o `algoritmo1_exp(lambda)`, siendo lambda el espectro de valores propios de tamaño arbitrario.
 Ejemplo:
