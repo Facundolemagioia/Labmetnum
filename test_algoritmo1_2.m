@@ -18,7 +18,7 @@ for k = valores_k
   prom_tiempo = 0;
   tasa_convergencia = 0;
   lambda = [3-k, 1+k, -1, -1, -1, -1];
-  for i = 1:100
+  for z = 1:100
     [Y, i, a, t]= algoritmo1_exp(lambda);
     
     prom_iteraciones = prom_iteraciones + (i/100); 
@@ -39,4 +39,19 @@ for k = valores_k
   printf("\n\n");
 endfor
 
+subplot(1, 3, 1)
+plot(valores_k,tasa);
+xlabel("N");
+ylabel("tasa de exito de convergencia");
+subplot(1,3,2)
+plot(valores_k, itera);
+xlabel("N");
+ylabel("iteraciones");
+subplot(1,3,3)
+plot(valores_k, tiempo);
+xlabel("N");
+ylabel("tiempo");
+
 endfunction
+
+

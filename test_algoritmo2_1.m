@@ -7,7 +7,8 @@ valores_n = [2, 3 , 5, 7, 9];
 
 output_precision(16);
 tasa = [];
-
+itera = [];
+tiempo = [];
 
 for j = valores_n;
   
@@ -32,6 +33,9 @@ for j = valores_n;
   endfor
   
   tasa = [tasa, tasa_convergencia];
+  itera = [itera, prom_iteraciones];
+  tiempo = [tiempo, prom_tiempo];
+  
   more off
   
   disp("promedio-iteraciones:"), disp(prom_iteraciones);

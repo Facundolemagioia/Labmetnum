@@ -5,6 +5,7 @@
 function test1 = test_algoritmo1_1()
 %36, 55, 80
 valores_n = [2, 3, 5, 7, 10, 15, 21, 36, 55, 80];
+%valores_n = [2, 3, 5, 6, 7, 8, 9 ,10, 11, 12, 13, 14 ,15, 16, 17, 18, 19, 20, 21, 22, 25, 27, 30, 36, 40, 55, 80];
 
 
 output_precision(16);
@@ -37,7 +38,7 @@ for j = valores_n;
   
   tasa = [tasa, tasa_convergencia];
   itera = [itera, prom_iteraciones];
-  tiempo = [tiempo, prom_tiempo];
+  tiempo = [tiempo, prom_tiempo];|
   
   more off
   
