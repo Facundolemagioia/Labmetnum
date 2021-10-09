@@ -14,8 +14,7 @@ function a2 = algoritmo2(eigenvalues)
     [U, T] = schur(Y, "complex"); % paso 3, Schur decomposition: UTU* 
     
     lambda = eig(T);
-    
-    % falta paso 4, calcular X con permutacion de lambda que minimice ..  
+      
    
     lambda_inicial = P(N,:); % lambda de entrada
     
@@ -38,7 +37,7 @@ function a2 = algoritmo2(eigenvalues)
    
   until ((norm(X - Y) < eps ) || (count2 == 5000))
  
-  X
-  disp(eig(X));
+  Y
+  disp(eig(Y));
 endfunction
 
