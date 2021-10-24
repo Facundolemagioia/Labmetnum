@@ -33,9 +33,11 @@ u0=u3;
 v0=v3;
 endfor
 
-subplot (3, 1, 1)
-plot (u);
-subplot (3, 1, 2)
-plot (v);
-subplot (3, 1, 3)
-plot (a);
+% subplot (3, 1, 1)
+% plot (u);
+% subplot (3, 1, 2)
+% plot (v);
+% subplot (3, 1, 3)
+% plot (a);
+
+plot(u,v)
