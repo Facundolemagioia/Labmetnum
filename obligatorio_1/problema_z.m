@@ -1,5 +1,5 @@
 function pz = problema_z()
-  
+  pkg load statistics
   eigenvalues = normrnd(0, 1,[5,1]);
   eigenvalues(1,1) = 1;
   
