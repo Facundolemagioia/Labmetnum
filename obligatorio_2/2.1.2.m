@@ -1,3 +1,4 @@
+% valores de problema resorte
 u0 = 1.5;
 v0 = 0;
 s1 = 100;
@@ -24,8 +25,8 @@ a2 = -s1*(1+s2*u2^2)*u2;
 u3 = u0 + Dt*v0 + 1/6*Dt^2*(a0 + a1 + a2);
 v3 = v0 + 1/4*Dt*(a0 + 3*a2);
 %
-if (i<=2*T)
-  u=[u,u3];
+if (i<=2*T) 
+  u=[u,u3]; 
   v=[v,v3];
   a=[a,a0];
 endif
