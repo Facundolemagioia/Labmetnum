@@ -19,7 +19,7 @@ u(1) = u0;
 z(1) = v0; 
 
 
-for i = 1:50
+for i = 1:1600
   K1u = f1(tt(i), u(i), z(i));
   K1z = f2(tt(i), u(i), z(i));
   

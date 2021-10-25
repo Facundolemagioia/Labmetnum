@@ -41,4 +41,4 @@ for i = 1:1200
 endfor
 
 %z es la velocidad
-plot(u,z);
+plot(tt,u);
