@@ -36,4 +36,4 @@ for i = rango
   v0=v3;
 endfor
 
-plot (rango,u(1:(length(u)-1)));
+plot (u,v);
