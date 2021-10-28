@@ -6,12 +6,13 @@ s2 = 10;
 T = 0.15153;
 Dt = T/32;
 tmax = 50*T;
+rango = 0:Dt:tmax;
 %
 u=[u0];
 v=[v0];
 a=[];
 %
-for i = 0:Dt:tmax
+for i = rango
   a0 = -s1*(1+s2*u0^2)*u0;
 %
   u1 = u0 + (1/2)*Dt*v0;
@@ -35,11 +36,4 @@ for i = 0:Dt:tmax
   v0=v3;
 endfor
 
-% subplot (3, 1, 1)
-% plot (u);
-% subplot (3, 1, 2)
-% plot (v);
-% subplot (3, 1, 3)
-% plot (a);
-
-plot(u,v)
+plot (rango,u(1:(length(u)-1)));
