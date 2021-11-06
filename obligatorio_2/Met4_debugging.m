@@ -9,7 +9,7 @@ v=[v0];
 a=[];
 %
 % PARAMETROS
-met = 4; %EL ORDEN DEL METODO%
+met = 3; %EL ORDEN DEL METODO%
 if (met == 3)
   t1 = 1/3;
   t2 = 2/3;
@@ -86,3 +86,5 @@ v4 = v0 +  f42*Dt*a0 + f43*Dt*a1 + f44*Dt*a2 + f45*Dt*a3;
 u0=u3;
 v0=v3;
 endfor
+
+plot(u, v);
