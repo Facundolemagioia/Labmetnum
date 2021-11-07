@@ -18,7 +18,7 @@ for i = rango
   a1 = -wc*sin(u1);
 %
   u2 = u0 +    5*Dt*v0 + 4*Dt^2*a0;
-  v2 = v0 + (-3)*Dt*a1 + 8*Dt*a1;
+  v2 = v0 + (-3)*Dt*a0 + 8*Dt*a1;
   a2 = -wc*sin(u2);
 %
   u3 = u0 +       Dt*v0 +  1/6*Dt^2*(-1*a0 + 8*a1);
