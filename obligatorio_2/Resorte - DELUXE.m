@@ -21,11 +21,13 @@ for i = rango
   v1 = v0 + (1/2)*Dt*a0; %%%
   a1 = -s1*(1+s2*u1^2)*u1; %%%
 %
-  u2 = u0 +    5*Dt*v0 + 4*Dt^2*a0; %%%
-  v2 = v0 + (-3)*Dt*a0 + 8*Dt*a1; %%%
+  u2 = u0 +    1*Dt*v0 + 1*Dt^2*a0; %%%
+  v2 = v0 + (-1)*Dt*a0 + 2*Dt*a1; %%%
   a2 = -s1*(1+s2*u2^2)*u2; %%%
 %
-  u3 = u0 +       Dt*v0 +  1/6*Dt^2*(-1*a0 + 8*a1); %%%
+  
+  u3 = u0 + Dt*v0 + (1/6)*(Dt^2)*a0 + (1/3)*(Dt^2)*a1;
+  %u3 = u0 +       Dt*v0 +  1/6*Dt^2*(-1*a0 + 8*a1); %%% esta mal
   v3 = v0 + (1/6)*Dt*a0 + (2/3)*Dt*a1 + (1/6)*Dt*a2;
 %
   if (i<=2*T) 
@@ -36,10 +38,11 @@ for i = rango
    uf=[uf,u3]; 
    vf=[vf,v3];
   endif  
-%
+% 
   u0=u3;
   v0=v3;
 endfor
+
 urk=u;
 vrk=v;
 urkf=uf;

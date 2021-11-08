@@ -60,5 +60,5 @@ for i = rango
   vr0=vr3;
   va0=va3;
 endfor
-%plot(ua)
+plot(ua)
 %plot(ur.*sin(ua),ur.*cos(ua))

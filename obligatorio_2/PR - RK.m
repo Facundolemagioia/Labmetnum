@@ -38,15 +38,17 @@ for i = rango
   ar1 = ar(MP,ur1,ua1,va1); %%%
   aa1 = aa(MP,ur1,vr1,ua1,va1); %%%
 %
-  ur2 = ur0 +    5*Dt*vr0 + 4*Dt^2*ar0;
-  ua2 = ua0 +    5*Dt*va0 + 4*Dt^2*aa0;
-  vr2 = vr0 + (-3)*Dt*ar1 + 8*Dt*ar1;
-  va2 = va0 + (-3)*Dt*aa1 + 8*Dt*aa1;
+  ur2 = ur0 +    1*Dt*vr0 + 1*Dt^2*ar0;
+  ua2 = ua0 +    1*Dt*va0 + 1*Dt^2*aa0;
+  vr2 = vr0 + (-1)*Dt*ar0 + 2*Dt*ar1;
+  va2 = va0 + (-1)*Dt*aa0 + 2*Dt*aa1;
   ar2 = ar(MP,ur2,ua2,va2);
   aa2 = aa(MP,ur2,vr2,ua2,va2);
 %
-  ur3 = ur0 +       Dt*vr0 +  1/6*Dt^2*(-1*ar0 + 8*ar1);
-  ua3 = ua0 +       Dt*va0 +  1/6*Dt^2*(-1*aa0 + 8*aa1);
+
+%u3 = u0 + Dt*v0 + (1/6)*(Dt^2)*a0 + (1/3)*(Dt^2)*a1;
+  ur3 = ur0 +       Dt*vr0 +  (1/6)*(Dt^2)*ar0 + (1/3)*(Dt^2)*ar1;
+  ua3 = ua0 +       Dt*va0 +  (1/6)*(Dt^2)*aa0 + (1/3)*(Dt^2)*aa1;
   vr3 = vr0 + (1/6)*Dt*ar0 + (2/3)*Dt*ar1 + (1/6)*Dt*ar2;
   va3 = va0 + (1/6)*Dt*aa0 + (2/3)*Dt*aa1 + (1/6)*Dt*aa2;
 %
@@ -60,5 +62,5 @@ for i = rango
   vr0=vr3;
   va0=va3;
 endfor
-%plot(ua)
+plot(ua)
 %plot(ur.*sin(ua),ur.*cos(ua))

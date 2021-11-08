@@ -17,14 +17,16 @@ for i = rango
   v1 = v0 + (1/2)*Dt*a0;
   a1 = -wc*sin(u1);
 %
-  u2 = u0 +    5*Dt*v0 + 4*Dt^2*a0;
-  v2 = v0 + (-3)*Dt*a0 + 8*Dt*a1;
+  u2 = u0 +    1*Dt*v0 + 1*Dt^2*a0;
+  v2 = v0 + (-1)*Dt*a0 + 2*Dt*a1;
   a2 = -wc*sin(u2);
 %
-  u3 = u0 +       Dt*v0 +  1/6*Dt^2*(-1*a0 + 8*a1);
+  u3 = u0 + Dt*v0 + (1/6)*(Dt^2)*a0 + (1/3)*(Dt^2)*a1;
+  %u3 = u0 +       Dt*v0 +  1/6*Dt^2*(-1*a0 + 8*a1); esta mal
   v3 = v0 + (1/6)*Dt*a0 + (2/3)*Dt*a1 + (1/6)*Dt*a2;
 %
-  u=[u,u3]; 
+  u=[u,u3];
+ 
 %
   u0=u3;
   v0=v3;
