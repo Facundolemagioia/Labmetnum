@@ -16,7 +16,7 @@ function [res] = aa(MP,ur,vr,ua,va)
 endfunction
 %
 Dt = 0.1;
-tmax = 50;
+tmax = 100;
 rango = 0:Dt:tmax;
 %%%%%%%%%%%%%%%%%% RK
 [ur0, vr0, ua0, va0] = deal(0.25, 0, pi/2, 0); %% Valores iniciales
