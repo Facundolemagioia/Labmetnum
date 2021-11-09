@@ -1,14 +1,14 @@
 %%%%%%%%%%%%%%%%%% PENDULO
-u0 = 0;
-v0 = 1.9999992384564990;%v0 = 2.0000001;
+u0i = 0;
+v0i = 1.9999992384564990;%v0i = 2.0000001;
 wc = 1;
 T = 33.7210;
 Dt = T/400;
 tmax = 3*T;
 rango = 0:Dt:tmax;
 %%%%%%%%%%%%%%%%%% RK
-u0 = 0;
-v0 = 1.9999;
+u0 = u0i;
+v0 = v0i;
 u=[u0];
 for i = rango
   a0 = -wc*sin(u0);
@@ -33,8 +33,8 @@ for i = rango
 endfor
 urk=u(1:(length(u)-1));
 %%%%%%%%%%%%%%%%%% M3
-u0 = 0;
-v0 = 1.9999;
+u0 = u0i;
+v0 = v0i;
 u=[u0];
 for i = rango
   a0 = -wc*sin(u0);
@@ -57,8 +57,8 @@ for i = rango
 endfor
 umet3=u(1:(length(u)-1));
 %%%%%%%%%%%%%%%%%% M4
-u0 = 0;
-v0 = 1.9999;
+u0 = u0i;
+v0 = v0i;
 u=[u0];
 for i = rango
   a0 = -wc*sin(u0); % EC. 1
