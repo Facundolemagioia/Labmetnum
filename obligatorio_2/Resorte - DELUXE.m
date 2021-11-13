@@ -27,7 +27,6 @@ for i = rango
 %
   
   u3 = u0 + Dt*v0 + (1/6)*(Dt^2)*a0 + (1/3)*(Dt^2)*a1;
-  %u3 = u0 +       Dt*v0 +  1/6*Dt^2*(-1*a0 + 8*a1); %%% esta mal
   v3 = v0 + (1/6)*Dt*a0 + (2/3)*Dt*a1 + (1/6)*Dt*a2;
 %
   if (i<=2*T) 
