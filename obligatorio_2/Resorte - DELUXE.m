@@ -127,7 +127,13 @@ vmet4=v;
 umet4f=uf;
 vmet4f=vf;
 %%%%%%%%%%%%%%%%%%  GRAFICOS
-subplot (2, 1, 1)
+subplot (2, 3, 1)
+plot(urk,vrk,"-r"); % RUNGE KUTTA-3
+subplot (2, 3, 2)
+plot(umet3,vmet3,"-b"); % MET3
+subplot (2, 3, 3)
+plot(umet4,vmet4,"-g"); % MET4
+subplot (2, 3, 4)
 plot(urk,vrk,"-r",umet3,vmet3,"-b",umet4,vmet4,"-g"); % PRIMEROS 2T
-subplot (2, 1, 2)
+subplot (2, 3, 5)
 plot(urkf,vrkf,"-r",umet3f,vmet3f,"-b",umet4f,vmet4f,"-g"); % ULTIMOS 2T
